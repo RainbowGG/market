@@ -1,5 +1,6 @@
 <?php 
-
+if(setcookie("Test","товар 1", time()+36000))
+	echo "gg ez";
 session_start();
 ?>
 <html>
@@ -17,7 +18,7 @@ session_start();
   <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#"><?php echo $_COOKIE['Test']; ?> Contact</a>
 </div>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
