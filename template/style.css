@@ -59,8 +59,8 @@
     transition: margin-left .5s;
     padding: 20px;
 	width: 100%;
-    max-width: 1400px;
-	margin-left: 100px;
+    max-width: 980px;
+	margin-left: 250px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -102,10 +102,26 @@ img#tov_img_main{
 	
 }
   .navbar-fixed-top {
-    position: fixed;
+    position: inherit;
     right: 0;
     left: 0;
     z-index: 130;
     margin-bottom: 0;
   }
+  
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+
+.img_slider
+{
+	
+	width:640px;
+	height:480px;
+	
+}
 

@@ -1,68 +1,36 @@
-<?php
+ <?php
 include "template/header.php";
-
-/* echo '<div class="itemdiv">';
-echo '<a href="2.php?id='.$row["tov_id"].'"><img class="tov_img" src="'.$row["tov_img"].'.'.$row["tov_imgtype"].'" /></a><br>';
-echo '<table><tr><td colspan="2"> '.$row["tov_name"].'</td></tr>';
-echo '<tr><td>'.$row["tov_price"].'</td><td><input name="'.$row["tov_name"].'" class="tovbtt" type="submit" value="submit"/></td></tr></table></div>';
-$i++;
-}
-}else{echo '00000';} */
-
 ?>
+
+
+<div style="w3-content">
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+
+  <img class="mySlides w3-animate-fading img_slider" src="/images/slider/1s.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading img_slider" src="/images/slider/2s.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading img_slider" src="/images/slider/3s.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading img_slider" src="/images/slider/4s.jpg" style="width:100%">
+</div>
+
 <script>
-var priceList = {
+var myIndex = 0;
+carousel();
 
-<?php	
-error_reporting(E_ALL);
-require_once "./config.php"; //файл настроек
-$sql = "SELECT tov_id, tov_name, tov_price, tov_img, tov_imgtype FROM site.tov_old;";
-$result = $connect->query($sql);
-$i = 0;
-if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) 
-		{
-	echo '"'.$row["tov_id"].'" : {"id" : "'.$row["tov_id"].'", "subid" : {}, "name" : "'.$row["tov_name"].'", "price" : "'.$row["tov_price"].'"},';
-		}
-};
-	?>
-};
-</script>	
-<h1>Все товары</h1>
-
-
-<!-- WI-BASKET -->
-
-<?php 
-$sql = "SELECT tov_id, tov_name, tov_price, tov_img, tov_imgtype FROM site.tov_old;";
-$result = $connect->query($sql);
-$i = 0;
-if ($result->num_rows > 0) {
-	while($row = $result->fetch_assoc()) 
-{
-	
-	 echo '<div class="itemdiv">';
-echo '<a href="2.php?id='.$row["tov_id"].'"><img class="tov_img" src="'.$row["tov_img"].'.'.$row["tov_imgtype"].'" /></a><br>';
-echo '<table><tr><td colspan="2"> '.$row["tov_name"].'</td></tr>';
-echo '<tr><td>'.$row["tov_price"].'</td><td><button id="wicartbutton_'.$row["tov_id"].'" onclick="cart.addToCart(this, `'.$row["tov_id"].'`, priceList[`'.$row["tov_id"].'`])">Купить</button></td></tr></table></div>';
-
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 15000);    
 }
-};
-	?>
+</script>
 
-	<div id="info">
-<?php ?>
-	</div>	
-	
- <!---<div class="v">
-<div><img class="im" src="img/ipad.png" /></div>
-Цена: <span class="wicartprice" id="wicartprice_002">10500</span> Руб.</p> 
-
-<!-- WI-VETRINE[002] 
-<button id="wicartbutton_002" onclick="cart.addToCart(this, '002', priceList['002'])">Купить</button>
-</div> -->
-
-
+</div>
 <?php
-include "template/footer.php";
-?>
+include "template/footer.php";?>

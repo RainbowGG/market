@@ -11,16 +11,19 @@ session_start();
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Wicart ver2.0</title>
+	<title>Market</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="template/style.css">
 	<link rel="stylesheet" type="text/css" href="themes/theme1.css" />
 	<link rel="stylesheet" type="text/css" href="wicart.css" />
+	<link rel="stylesheet" type="text/css" href="template/w3s.css" />
+
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" ></script>
 	<!-- WI-JQ-HEADER -->
 	<script src="wicart.js"  type="text/javascript" ></script>
 	<!-- WI-HEADER -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 </head>
 <body>
 <?php
@@ -28,11 +31,11 @@ include "template/cart_v1.php";
 ?>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#"> Contact</a>
+  <a href="index.php">Главная</a>
+  <a href="Category.php">Категории</a>
+  <a href="alltov.php">Все товары</a>
+  <a href="about.php">О нас</a>
 </div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+<span style="font-size:35px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
-<div id="main">
+<div id="w3-content">
