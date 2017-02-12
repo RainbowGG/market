@@ -1,0 +1,10 @@
+<?php
+if(isset($_POST["submit"])){
+if(empty($_POST["textOne"])){
+echo "Empty";
+}
+echo " ".$_POST["textOne"]." ";
+}
+?>
+</body>
+</html>
