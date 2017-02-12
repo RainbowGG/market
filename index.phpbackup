@@ -28,9 +28,13 @@ if ($result->num_rows > 0) {
 	?>
 };
 </script>	
-<h1>Все товары</h1>
+<h1>Пример JQuery корины для сайта</h1>
 
+<div class="cart">
+<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
 
+<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
+</div>
 <!-- WI-BASKET -->
 
 <?php 
@@ -40,12 +44,10 @@ $i = 0;
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) 
 {
-	
-	 echo '<div class="itemdiv">';
-echo '<a href="2.php?id='.$row["tov_id"].'"><img class="tov_img" src="'.$row["tov_img"].'.'.$row["tov_imgtype"].'" /></a><br>';
-echo '<table><tr><td colspan="2"> '.$row["tov_name"].'</td></tr>';
-echo '<tr><td>'.$row["tov_price"].'</td><td><button id="wicartbutton_'.$row["tov_id"].'" onclick="cart.addToCart(this, `'.$row["tov_id"].'`, priceList[`'.$row["tov_id"].'`])">Купить</button></td></tr></table></div>';
-
+	echo'<div class="v"><div><img class="tov_img" src="'.$row["tov_img"].'.'.$row["tov_imgtype"].'" /></div>';
+	echo'Цена: <span class="wicartprice" id="wicartprice_'.$row["tov_id"].'">'.$row["tov_price"].'</span> Грн.</p>';
+	echo'<button id="wicartbutton_'.$row["tov_id"].'" onclick="cart.addToCart(this, `'.$row["tov_id"].'`, priceList[`'.$row["tov_id"].'`])">Купить</button></div>';
+$i++;
 }
 };
 	?>

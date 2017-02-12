@@ -1,11 +1,10 @@
-.body {
- width: 100%;
- max-width: 1000px;
- height: 100%;
- color:#333;
- background: url(images/body.png) 0px 0px repeat;
-}
-
+.v {
+	border:1px solid #999; 
+	border-radius: 
+	5px;padding: 
+	10px;margin-bottom: 
+	10px; width: 340px;
+	}
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -44,23 +43,15 @@
     margin-left: 50px;
 }
 
-#header .smalcart{
-    float:right;    
-    height:55px;
-    padding: 10px;
-    padding-left: 15px;
-    margin: 10px;
-    border: 1px solid gray;
-    border-radius: 10px; 
-    -moz-border-radius: 10px; 
-    -webkit-border-radius: 10px;  
-    background: #E6DEEA;
-}
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
+	width: 100%;
+    max-width: 1400px;
+	margin-left: 100px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -86,9 +77,16 @@
 	/*border: solid 12px black;*/ 
 
 }
-img{
+.tov_img{
 	width:240px;
 	height:240px;
 	
 }
+  .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 130;
+    margin-bottom: 0;
+  }
 
