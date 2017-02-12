@@ -44,6 +44,19 @@
     margin-left: 50px;
 }
 
+#header .smalcart{
+    float:right;    
+    height:55px;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 10px; 
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;  
+    background: #E6DEEA;
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;

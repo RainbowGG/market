@@ -1,16 +1,20 @@
 <?php 
-
 session_start();
 ?>
 <html>
 <head>
 <title>
-11
 </title>
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+
+<div class="smalcart">
+    <strong>Товаров в корзине:</strong><?=$smal_cart['cart_count']?> шт.
+     <br/><strong>На сумму:</strong><?=$smal_cart['cart_price']?> грн.    
+    <br/><a href=''>Оформить заказ</a>
+</div>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
