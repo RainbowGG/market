@@ -50,6 +50,10 @@ echo '<tr><td>'.$row["tov_price"].'</td><td><button id="wicartbutton_'.$row["tov
 };
 	?>
 
+	<div id="info">
+<?php ?>
+	</div>	
+	
  <!---<div class="v">
 <div><img class="im" src="img/ipad.png" /></div>
 Цена: <span class="wicartprice" id="wicartprice_002">10500</span> Руб.</p> 
@@ -58,39 +62,7 @@ echo '<tr><td>'.$row["tov_price"].'</td><td><button id="wicartbutton_'.$row["tov
 <button id="wicartbutton_002" onclick="cart.addToCart(this, '002', priceList['002'])">Купить</button>
 </div> -->
 
-<!---Форма для магазина-------------------------------->
-<div id="order" class="popup">
-<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
-<h4>Введите ваши контактные данные</h4>
 
-<form id="formToSend">
-<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
-<input id="city" type="text" placeholder="Город"  class="text-input"/>
-<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
-<input id="email" type="text" placeholder="Электронная почта" class="" />
-<br>
-<textarea id="question" placeholder="Адрес"></textarea>
-</form>
-<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
-</div>
-<!----------------------------------------------------->
-
-<script>
-var cart;
-var config;
-var wiNumInputPrefID;
-/* WI-GLOBAL-VARS */
-$(document).ready(function(){  
-    cart = new WICard("cart");
-    config = {'clearAfterSend':true, 'showAfterAdd':false};
-    
-    cart.init("basketwidjet", config);
-    /* WI-MODULES */
-});	
-document.addEventListener('visibilitychange', function(e) {
-cart.init("basketwidjet", config);
-}, false);
-</script>
 <?php
 include "template/footer.php";
 ?>
