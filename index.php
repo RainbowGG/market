@@ -5,8 +5,8 @@ include "template/header.php";
 
 <div style="w3-content">
 
-<div class="w3-content w3-section" style="max-width:500px">
-  <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+<div class="w3-content w3-section" style="max-width:1020px">
+  <p>Ку ку, анимированный слайдер тут!!!</p>
 
   <img class="mySlides w3-animate-fading img_slider" src="/images/slider/1s.jpg" style="width:100%">
   <img class="mySlides w3-animate-fading img_slider" src="/images/slider/2s.jpg" style="width:100%">

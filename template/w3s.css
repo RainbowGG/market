@@ -1,7 +1,6 @@
-.w3-content{max-width:380px;margin:auto}
+.w3-content{max-width:240px;margin:auto}
 .w3-section{margin-top:16px!important;margin-bottom:16px!important}
 .w3-animate-fading{-webkit-animation:fading 15s infinite;animation:fading 15s infinite}
-
 .w3-animate-fading{-webkit-animation:fading 15s infinite;animation:fading 15s infinite}
 @-webkit-keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
 @keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
